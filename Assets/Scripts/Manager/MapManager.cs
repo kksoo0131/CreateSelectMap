@@ -17,6 +17,8 @@ public class LocationInfo
     public int Index { get; private set; }
     public int Floor { get; private set; }
     public List<int> RouteIndexs { get; private set; }
+
+    public RectTransform rectTransform { get; set; }
 }
 public class MapManager : Singleton<MapManager>
 {
@@ -45,8 +47,9 @@ public class MapManager : Singleton<MapManager>
                 // 다음지역 중 하나를 선택한다.
             }
         }
+        CheckDebugMap();
 
-        
+
     }
 
     public void CheckDebugMap()
@@ -128,7 +131,11 @@ public class MapManager : Singleton<MapManager>
                 AddSelectList(selectList, possibility, nextX);
             }
         }
-        Map[floor+1].Add(new LocationInfo(Util.SelectItemFromList(selectList), floor + 1));
+
+        int nextIndex = Util.SelectItemFromList(selectList);
+        Map[floor+1].Add(new LocationInfo(nextIndex, floor + 1));
+        // 이때 시작점에도 추가해준다.
+        location.RouteIndexs.Add(Map[floor+1].Count-1);
     }
 
     public bool CheckXPos(int x)
