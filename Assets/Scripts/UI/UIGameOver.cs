@@ -1,7 +1,6 @@
-using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class UIStartMenu : UIBase
+public class UIGameOver : UIBase
 {
     public UIButton StartBtn;
     public UIButton EndBtn;
@@ -13,16 +12,16 @@ public class UIStartMenu : UIBase
 
     public void GameStart()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("StartScene");
 
     }
-    public void GameEnd() 
+    public void GameEnd()
     {
-        #if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false;
-        #else
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
             Apllication.Quit();
-        #endif
+#endif
     }
 
 }

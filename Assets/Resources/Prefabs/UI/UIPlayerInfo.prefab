@@ -513,6 +513,7 @@ GameObject:
   - component: {fileID: 6116346248802815765}
   - component: {fileID: 6053623025565329956}
   - component: {fileID: 8280649002007187028}
+  - component: {fileID: 3240746535659385029}
   m_Layer: 5
   m_Name: UIPlayerInfo
   m_TagString: Untagged
@@ -580,6 +581,24 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3240746535659385029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2587777334985149408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4b6f0c4f4958904bae3d4f5ff39d1c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 0}
+  Hp: {fileID: 9130531762515371544}
+  Mp: {fileID: 4691095537232708533}
+  Attack: {fileID: 6473411017104144639}
+  Gold: {fileID: 78083530260075916}
+  playerStat: {fileID: 0}
 --- !u!1 &2622543801383499807
 GameObject:
   m_ObjectHideFlags: 0

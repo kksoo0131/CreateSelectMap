@@ -4,6 +4,9 @@ public enum UIName
     UIButton,
     UIStartMenu,
     UIEventWindow,
+    UIGameOver,
+    UIPlayerInfo,
+    UIClear,
 }
 public enum EventType
 {

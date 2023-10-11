@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player
 {
     public CharacterStatSO baseStat;
     public CharacterStatSO CurrentStat { get; private set; }
