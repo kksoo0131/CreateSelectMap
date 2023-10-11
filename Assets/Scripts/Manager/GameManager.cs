@@ -27,12 +27,14 @@ public class GameManager : MonoBehaviour
 
         if (player.CurrentStat.Hp <= 0)
         {
+            MapManager.Instance.ClearMap();
             UIManager.Instance.OpenUI(UIName.UIGameOver);
             isRun = false;
 
         }
         if (CurrentLocationInfo != null && CurrentLocationInfo.Floor >= 9)
         {
+            MapManager.Instance.ClearMap();
             UIManager.Instance.OpenUI(UIName.UIClear);
             isRun = false;
         }
@@ -41,6 +43,7 @@ public class GameManager : MonoBehaviour
     private void GameInit()
     {
         isRun = true;
+        MapManager.Instance.ClearMap();
         UIManager.Instance.OpenUI(UIName.UIMap);
         player = new Player
         {
