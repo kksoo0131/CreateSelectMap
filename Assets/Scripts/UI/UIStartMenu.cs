@@ -1,5 +1,5 @@
-using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine;
 
 public class UIStartMenu : UIBase
 {
@@ -21,7 +21,7 @@ public class UIStartMenu : UIBase
         #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
         #else
-            Apllication.Quit();
+            Application.Quit();
         #endif
     }
 
