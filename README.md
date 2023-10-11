@@ -49,6 +49,7 @@ Slay the Spire의 지도 맵으로 던전을 탐험하는 시스템을 구현해
 ### UIMap [Wiki](https://github.com/kksoo0131/CreateSelectMap/wiki/UIMap)
 ### UIButton [Wiki](https://github.com/kksoo0131/CreateSelectMap/wiki/UIButton)
 ### UIEventWindow [Wiki](https://github.com/kksoo0131/CreateSelectMap/wiki/UIEventWindow)
+### UIEventIcon [Wiki](https://github.com/kksoo0131/CreateSelectMap/wiki/UIEventIcon)
 
 <br/>
 
