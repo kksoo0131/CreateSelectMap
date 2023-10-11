@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public static class Util
@@ -9,7 +8,7 @@ public static class Util
         List<int> ints = new List<int>();
         int count = end - start;
 
-        for (int i = start; i < count; i++)
+        for (int i = start; i < end; i++)
         {
             ints.Add(i);
         }

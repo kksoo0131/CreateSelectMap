@@ -1,8 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
-using UnityEngine.UIElements;
 
 public class UIEventWindow : UIBase
 {
@@ -11,25 +8,28 @@ public class UIEventWindow : UIBase
 
     // SO¿¡ ¹öÆ°
 
+    public EventInfoSO eventInfoSO;
     public TextMeshProUGUI eventName;
     public TextMeshProUGUI eventInfo;
     public List<UIButton> selectButtonList = new List<UIButton>();
 
     public void Init(EventInfoSO so)
     {
-        eventName.text = so.eventName;
-        eventInfo.text = so.eventInfo;
+        eventInfoSO = so;
+
+        eventName.text = eventInfoSO.eventName;
+        eventInfo.text = eventInfoSO.eventInfo;
 
         for (int i =0; i< selectButtonList.Count; i++)
         {
-            if (i >= so.selectEventInfo.Count)
+            if (i >= eventInfoSO.selectEventInfo.Count)
             {
                 selectButtonList[i].gameObject.SetActive(false);
                 continue;
             }
             selectButtonList[i].gameObject.SetActive(true);
             selectButtonList[i].OnClick += OnClicked;
-            selectButtonList[i].GetComponentInChildren<TextMeshProUGUI>().text = so.selectEventInfo[i];
+            selectButtonList[i].GetComponentInChildren<TextMeshProUGUI>().text = eventInfoSO.selectEventInfo[i];
         }
     }
 
