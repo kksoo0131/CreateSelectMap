@@ -10,6 +10,8 @@ Slay the Spire의 지도 맵으로 던전을 탐험하는 시스템을 구현해
 
 <br/>
 
+![Movie_004](https://github.com/kksoo0131/CreateSelectMap/assets/99727193/c4ddabd1-a50f-4b94-b84d-b13c6d33c548)
+
 ## 필수 요구사항
 
 1. 인트로 씬 구성
