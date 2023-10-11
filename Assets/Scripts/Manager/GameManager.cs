@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
     public Transform UIRoot;
     public LocationInfo CurrentLocationInfo;
     public Player player;
+    public bool isRun;
     
     public CharacterStatSO stat; // temp
     private void Awake()
@@ -20,11 +21,31 @@ public class GameManager : MonoBehaviour
         
     }
 
+    private void Update()
+    {
+        if (!isRun) return;
+
+        if (player.CurrentStat.Hp <= 0)
+        {
+            UIManager.Instance.OpenUI(UIName.UIGameOver);
+            isRun = false;
+
+        }
+        if (CurrentLocationInfo != null && CurrentLocationInfo.Floor >= 9)
+        {
+            UIManager.Instance.OpenUI(UIName.UIClear);
+            isRun = false;
+        }
+    }
+
     private void GameInit()
     {
+        isRun = true;
         UIManager.Instance.OpenUI(UIName.UIMap);
-        player = new Player();
-        player.baseStat = stat;
+        player = new Player
+        {
+            baseStat = stat
+        };
         player.StatInit();
     }
 
