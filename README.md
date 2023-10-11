@@ -56,6 +56,8 @@ Slay the Spire의 지도 맵으로 던전을 탐험하는 시스템을 구현해
 ## ScriptableObject
 ### EventInfoSO [Wiki](https://github.com/kksoo0131/CreateSelectMap/wiki/EventInfoSO)
 ### EventFuncSO [Wiki](https://github.com/kksoo0131/CreateSelectMap/wiki/EventFuncSO)
+### DamagedEventSO [Wiki](https://github.com/kksoo0131/CreateSelectMap/wiki/DamagedEventSO)
+### RunEventSO [Wiki]()
 <br/>
 
 ## Util
