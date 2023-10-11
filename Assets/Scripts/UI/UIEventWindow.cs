@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Reflection;
 using TMPro;
 
 public class UIEventWindow : UIBase
@@ -28,14 +29,9 @@ public class UIEventWindow : UIBase
                 continue;
             }
             selectButtonList[i].gameObject.SetActive(true);
-            selectButtonList[i].OnClick += OnClicked;
+            selectButtonList[i].OnClick += eventInfoSO.selectEventFunc[i].OnUse;
             selectButtonList[i].GetComponentInChildren<TextMeshProUGUI>().text = eventInfoSO.selectEventInfo[i];
         }
-    }
-
-    public void OnClicked()
-    {
-        UIManager.Instance.CloseUI();
     }
 }
 
