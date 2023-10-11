@@ -3,22 +3,26 @@ using System.Text;
 using UnityEngine;
 public class LocationInfo
 {
-    public LocationInfo(int x, int y)
+    public LocationInfo(int x, int y, EventType type)
     {
-        Init(x, y);
+        Init(x, y, type);
     }
 
-    public void Init(int x, int y)
+    public void Init(int x, int y, EventType type)
     {
         Index = x;
         Floor = y;
         RouteIndexs = new List<int>();
+        EventType = type;
     }
     public int Index { get; private set; }
     public int Floor { get; private set; }
     public List<int> RouteIndexs { get; private set; }
-
     public RectTransform rectTransform { get; set; }
+
+    public EventType EventType { get; private set; }
+
+    public EventInfoSO EventInfoSO { get; private set; }
 }
 public class MapManager : Singleton<MapManager>
 {
@@ -33,6 +37,8 @@ public class MapManager : Singleton<MapManager>
     public int[] moveable = { -1, 0, 1 };
     public void GenerateMapStructure(int floorNumber)
     {
+        if (Map != null) return;
+
         Init(floorNumber);
 
         for( int i =1; i< maxYIndex; i++)
@@ -47,8 +53,6 @@ public class MapManager : Singleton<MapManager>
                 // 다음지역 중 하나를 선택한다.
             }
         }
-        CheckDebugMap();
-
 
     }
 
@@ -89,7 +93,8 @@ public class MapManager : Singleton<MapManager>
 
         foreach(int index in Util.SelectNumber(0, maxXIndex, choice))
         {
-            Map[0].Add(new LocationInfo(index, 0));
+            EventType type = (EventType)Random.Range(0, (int)EventType.EndPoint);
+            Map[0].Add(new LocationInfo(index, 0, type));
         }
     }
 
@@ -133,7 +138,8 @@ public class MapManager : Singleton<MapManager>
         }
 
         int nextIndex = Util.SelectItemFromList(selectList);
-        Map[floor+1].Add(new LocationInfo(nextIndex, floor + 1));
+        EventType type = (EventType)Random.Range(0, (int)EventType.EndPoint);
+        Map[floor+1].Add(new LocationInfo(nextIndex, floor + 1,type));
         // 이때 시작점에도 추가해준다.
         location.RouteIndexs.Add(Map[floor+1].Count-1);
     }
@@ -164,4 +170,6 @@ public class MapManager : Singleton<MapManager>
                 break;
         }
     }
+
+   
 }

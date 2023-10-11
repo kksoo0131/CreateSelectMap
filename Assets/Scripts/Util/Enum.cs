@@ -1,11 +1,15 @@
 public enum UIName
 {
     UIMap,
+    UIButton,
+    UIStartMenu,
+    UIEventWindow,
 }
-
-public enum SelectType
+public enum EventType
 {
     Battle,
-    Box,
-    Heal,
+    Chest,
+    Potion,
+    Elite,
+    EndPoint,
 }

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9a4542202acbaa48b62eb4edf5539c8, type: 3}
+  m_Name: BattleEvent
+  m_EditorClassIdentifier: 
+  eventName: "\uC804\uD22C \uBC1C\uC0DD!"
+  eventInfo: "\uB2F9\uC2E0\uC740 \uBAAC\uC2A4\uD130 \uBB34\uB9AC\uC640 \uB9C8\uC8FC\uCCE4\uC2B5\uB2C8\uB2E4."
+  selectEventInfo:
+  - "\uC804\uD22C \uAC1C\uC2DC"
+  - "\uB3C4\uB9DD \uCE5C\uB2E4."
