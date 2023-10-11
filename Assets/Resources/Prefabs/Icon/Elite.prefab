@@ -126,7 +126,6 @@ GameObject:
   - component: {fileID: 6220982119262497090}
   - component: {fileID: 5444101656124376688}
   - component: {fileID: 2821096622725942763}
-  - component: {fileID: 941821093443028984}
   - component: {fileID: 2006650586554018498}
   m_Layer: 5
   m_Name: EliteEvent
@@ -237,7 +236,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 941821093443028984}
+      - m_Target: {fileID: 2006650586554018498}
         m_TargetAssemblyTypeName: UIButton, Assembly-CSharp
         m_MethodName: OnClicked
         m_Mode: 1
@@ -249,19 +248,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &941821093443028984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8588068444666849022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e6c878f49ea2954580d5b983c9c19aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parent: {fileID: 0}
 --- !u!114 &2006650586554018498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,5 +260,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f8b3487c38158341a012c85a5b62cdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parent: {fileID: 0}
   eventInfoSO: {fileID: 11400000, guid: e9ff46ff13ea4d74eab45b7bd48adbac, type: 2}
   Check: {fileID: 8371856300949420295}

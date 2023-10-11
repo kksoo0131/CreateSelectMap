@@ -1,16 +1,11 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.Drawing;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.XR;
 
 public class UIMap : UIBase
 {
     public int floorNumber;
     public GameObject root;
-    public GameObject icon;
     public GameObject route;
 
     public GameObject Battle;
@@ -24,8 +19,7 @@ public class UIMap : UIBase
     private void Start()
     {
         InitMap();
-        floor = 0;
-        roundTxt.text = floor.ToString();
+        
     }
 
     private void Update()
@@ -38,14 +32,16 @@ public class UIMap : UIBase
         }
     }
 
-    public void InitMap()
+    private void InitMap()
     {
+        floor = 0;
+        roundTxt.text = floor.ToString();
         MapManager.Instance.GenerateMapStructure(floorNumber);
         DrawMap();
         DrawRoute();
     }
 
-    public void DrawMap()
+    private void DrawMap()
     {
         for (int i = 0; i < floorNumber; i++)
         {
@@ -56,7 +52,7 @@ public class UIMap : UIBase
 
     }
 
-    public void DrawIcon(List<LocationInfo> floor, float y)
+    private void DrawIcon(List<LocationInfo> floor, float y)
     {
         foreach (LocationInfo location in floor)
         {
@@ -64,7 +60,7 @@ public class UIMap : UIBase
             GameObject go = Instantiate(select, root.transform);
             location.rectTransform = go.GetComponent<RectTransform>();
             go.transform.localPosition = new Vector3(-380 + 20 + 720 / 9 * location.Index, y, 0);
-            go.GetComponentInChildren<EventIcon>().info = location;
+            go.GetComponentInChildren<UIEventIcon>().info = location;
 
         }
         
@@ -94,7 +90,7 @@ public class UIMap : UIBase
         return null;
     }
 
-    public void DrawRoute()
+    private void DrawRoute()
     {
         for(int i =0; i < floorNumber-1; i++)
         {

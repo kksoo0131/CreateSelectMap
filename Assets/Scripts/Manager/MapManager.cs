@@ -56,7 +56,12 @@ public class MapManager : Singleton<MapManager>
 
     }
 
-    public void CheckDebugMap()
+    public void ClearMap()
+    {
+        Map = null;
+    }
+
+    private void CheckDebugMap()
     {
         StringBuilder sb = new StringBuilder();
 
@@ -83,7 +88,7 @@ public class MapManager : Singleton<MapManager>
 
         Debug.Log(sb.ToString());
     }
-    public void Init(int floorNumber)
+    private  void Init(int floorNumber)
     {
         maxYIndex = floorNumber;
         Map = new List<LocationInfo>[maxYIndex];
@@ -98,7 +103,7 @@ public class MapManager : Singleton<MapManager>
         }
     }
 
-    public int[] RouteCountThisFloor(List<LocationInfo> floor)
+    private int[] RouteCountThisFloor(List<LocationInfo> floor)
     {
         // 이전층의 List를 floor로 받아왔음 지금
         int[] possibleRoute = new int[maxXIndex];
@@ -107,22 +112,19 @@ public class MapManager : Singleton<MapManager>
         {
             int index = location.Index;
 
-            possibleRoute[index]++;
-
-            if (index - 1 >= 0)
+            foreach (int move in moveable)
             {
-                possibleRoute[index - 1]++;
-            }
-
-            if (index + 1 < maxXIndex)
-            {
-                possibleRoute[index + 1]++;
+                int nextX = index + move;
+                if (CheckXPos(nextX))
+                {
+                    possibleRoute[nextX]++;
+                }
             }
         }
         return possibleRoute;
     }
 
-    public void SelectRoute(LocationInfo location, int[] possibility)
+    private  void SelectRoute(LocationInfo location, int[] possibility)
     {
         int index = location.Index;
         int floor = location.Floor;
@@ -144,7 +146,7 @@ public class MapManager : Singleton<MapManager>
         location.RouteIndexs.Add(Map[floor+1].Count-1);
     }
 
-    public bool CheckXPos(int x)
+    private bool CheckXPos(int x)
     {
         if (x < 0 || x >= maxXIndex)
         {
@@ -153,7 +155,7 @@ public class MapManager : Singleton<MapManager>
         return true;
     }
 
-    public void AddSelectList(List<int> selectList, int[] possiblity, int x )
+    private void AddSelectList(List<int> selectList, int[] possiblity, int x )
     {
         switch (possiblity[x])
         {
