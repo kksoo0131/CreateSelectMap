@@ -18,3 +18,6 @@ MonoBehaviour:
   selectEventInfo:
   - "\uC804\uD22C \uC2DC\uC791"
   - "\uB3C4\uB9DD \uCE5C\uB2E4."
+  selectEventFunc:
+  - {fileID: 11400000, guid: ba7f6231ce8e2c547a6db464ab0cdbd7, type: 2}
+  - {fileID: 11400000, guid: 049e98578a133e145adbf1abce1d7b60, type: 2}

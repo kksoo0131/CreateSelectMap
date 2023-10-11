@@ -21,3 +21,7 @@ MonoBehaviour:
   - "\uBE68\uAC04 \uD3EC\uC158"
   - "\uD30C\uB780 \uD3EC\uC158"
   - "\uCD08\uB85D \uD3EC\uC158"
+  selectEventFunc:
+  - {fileID: 11400000, guid: 974910d515d510849829caf5b990609f, type: 2}
+  - {fileID: 11400000, guid: 26db14bd851236343a026a326d5ef07f, type: 2}
+  - {fileID: 11400000, guid: 790016190efc3a74f8d28326e98976c9, type: 2}
