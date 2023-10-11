@@ -20,19 +20,19 @@ Slay the Spire의 지도 맵으로 던전을 탐험하는 시스템을 구현해
 
 ## 선택 요구사항
 
-2. Instantiate로 오브젝트 생성  
-4. 스크립트로 버튼에 이벤트 추가
-5. delegate 사용
-7. generic을 이용한 싱글톤
-9. Dictionary 활용
-10. Queue,Stack 활용
+- Instantiate로 오브젝트 생성  
+- 스크립트로 버튼에 이벤트 추가
+- delegate 사용
+- generic을 이용한 싱글톤
+- Dictionary 활용
+- Queue,Stack 활용
 
  <br/>
  
-> 1. ~~오브젝트 풀링~~
-> 3. ~~InputAction 사용~~
-> 6. ~~raycast~~
-> 8. ~~FSM~~
+>  ~~오브젝트 풀링~~
+>  ~~InputAction 사용~~
+>  ~~raycast~~
+>  ~~FSM~~
 
 
 ## Main Functions
