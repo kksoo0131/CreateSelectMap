@@ -8,6 +8,15 @@
 
 Slay the Spire의 지도 맵을 레퍼런스로 랜덤으로 던전이 생성되고 경로를 선택해서 진행하는 시스템을 만들어 보았습니다.
 
+## Development Environment
+
+Language : C#
+
+Engine : Unity 2022.3.2f1
+
+IDE : Visual Studio 2022
+
+Framework : .NET 6.0
 
 ## 구현 기능
 
