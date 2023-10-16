@@ -26,6 +26,7 @@ Slay the Spire의 지도 맵을 레퍼런스로 랜덤으로 던전이 생성되
    RunEventSO [Wiki](https://github.com/kksoo0131/CreateSelectMap/wiki/RunEventSO)
 
 5. EventInfoSo의 정보를 바탕으로 UIEventWindow에서 관리하는 Text, Button의 기능이 정해집니다.
+
    
    UIEventWindow [Wiki](https://github.com/kksoo0131/CreateSelectMap/wiki/UIEventWindow)
 
