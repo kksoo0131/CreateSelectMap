@@ -8,6 +8,19 @@
 
 Slay the Spire의 지도 맵을 레퍼런스로 랜덤으로 던전이 생성되고 경로를 선택해서 진행하는 시스템을 만들어 보았습니다.
 
+
+## 구현 기능
+
+1. 랜덤으로 맵의 구조를 생성하고 해당 맵의 정보를 할당
+   
+    MapManager [Wiki](https://github.com/kksoo0131/CreateSelectMap/wiki/MapManager)
+
+2. 각 맵 (이벤트)에 관한 정보들을 ScriptableObject로 관리
+
+   EventInfoSO [Wiki](https://github.com/kksoo0131/CreateSelectMap/wiki/EventInfoSO)
+   
+   EventFuncSO [Wiki](https://github.com/kksoo0131/CreateSelectMap/wiki/EventFuncSO)
+
 <br/>
 
 ## 전체적인 흐름 영상
