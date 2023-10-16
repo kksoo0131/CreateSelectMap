@@ -18,9 +18,12 @@ Slay the Spire의 지도 맵을 레퍼런스로 랜덤으로 던전이 생성되
 2. 각 맵 (이벤트)에 관한 정보들을 ScriptableObject로 관리
 
    EventInfoSO [Wiki](https://github.com/kksoo0131/CreateSelectMap/wiki/EventInfoSO)
-   
-   EventFuncSO [Wiki](https://github.com/kksoo0131/CreateSelectMap/wiki/EventFuncSO)
 
+3. EventInfoSo로 생성한 ScriptableObject들의 FuncList에 EventFuncSO을 상속받은 ScriptableObject를 할당해 이벤트의 기능을 선택합니다.
+
+   DamagedEventSO [Wiki](https://github.com/kksoo0131/CreateSelectMap/wiki/DamagedEventSO)
+   RunEventSO [Wiki](https://github.com/kksoo0131/CreateSelectMap/wiki/RunEventSO)
+   
 <br/>
 
 ## 전체적인 흐름 영상
